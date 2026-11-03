@@ -2,6 +2,11 @@ Jenkinsfile
 pipeline{
     agent any
     stages{
+        stage('Checkout'){
+            steps{
+                git 'https://github.com/Sujith-A1108/pracs.git'
+            }
+        }
         stage('Build'){
             steps{
                 bat 'mvn clean compile'
